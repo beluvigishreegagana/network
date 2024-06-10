@@ -13,6 +13,3 @@ resource "azurerm_subnet" "subnet" {
   address_prefixes    = [element(var.subnet_address_prefix, count.index)]
 }
 
-output "subnet_ids" {
-  value = azurerm_subnet.subnet[*].id
-}
